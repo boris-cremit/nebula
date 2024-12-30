@@ -1,0 +1,49 @@
+[package]
+name = "nebula-backbone-domain"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+tokio = { workspace = true, features = ["full"] }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap = { workspace = true }
+axum = { workspace = true, features = ["macros"] }
+xdg = "2.5.2"
+config = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sea-orm = { workspace = true, features = ["mock"] }
+aws-config = { workspace = true }
+aws-credential-types = { workspace = true }
+aws-sigv4 = { workspace = true }
+ulid = { workspace = true, features = ["serde"] }
+url = { workspace = true, features = ["serde"] }
+urlencoding = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+chrono = { workspace = true, features = ["serde"] }
+regex = { workspace = true }
+lazy_static = { workspace = true }
+nebula-abe = { workspace = true }
+rand = { workspace = true }
+base64 = { workspace = true }
+rmp-serde = { workspace = true }
+nebula-policy.workspace = true
+sea-orm-migration.workspace = true
+futures-util.workspace = true
+nebula-token = { workspace = true }
+reqwest = { workspace = true, features = ["json"] }
+tower-http = { workspace = true, features = ["cors"] }
+pest.workspace = true
+pest_derive.workspace = true
+nebula-common = { workspace = true }
+
+[dev-dependencies]
+mockall = { workspace = true }
+maplit = "1.0.2"

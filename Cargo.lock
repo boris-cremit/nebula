@@ -2771,6 +2771,49 @@ dependencies = [
 ]
 
 [[package]]
+name = "nebula-backbone-domain"
+version = "0.0.5"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "aws-config",
+ "aws-credential-types",
+ "aws-sigv4",
+ "axum",
+ "base64 0.22.1",
+ "chrono",
+ "clap",
+ "config",
+ "futures-util",
+ "lazy_static",
+ "maplit",
+ "mockall",
+ "nebula-abe",
+ "nebula-common",
+ "nebula-policy",
+ "nebula-token",
+ "pest",
+ "pest_derive",
+ "rand",
+ "regex",
+ "reqwest",
+ "rmp-serde",
+ "sea-orm",
+ "sea-orm-migration",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tower-http",
+ "tracing",
+ "tracing-subscriber",
+ "ulid",
+ "url",
+ "urlencoding",
+ "xdg",
+]
+
+[[package]]
 name = "nebula-cli"
 version = "0.0.5"
 dependencies = [

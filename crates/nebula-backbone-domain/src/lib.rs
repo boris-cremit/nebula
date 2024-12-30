@@ -2,8 +2,6 @@ use std::path::PathBuf;
 
 use clap::Parser;
 
-use crate::logger::LoggerConfig;
-
 pub mod application;
 pub mod config;
 pub mod database;
@@ -35,20 +33,6 @@ struct Args {
     /// Sets a database password
     #[arg(long)]
     pub database_password: Option<String>,
-}
-
-#[tokio::main]
-async fn main() -> anyhow::Result<()> {
-    let args = Args::parse();
-
-    let app_config = config::load_config(args)?;
-
-    logger::init_logger(LoggerConfig::default());
-
-    let application = application::init(&app_config).await?;
-
-    server::run(application, (&app_config).into()).await?;
-    Ok(())
 }
 
 pub trait IntoAnyhow<T> {
